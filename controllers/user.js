@@ -402,8 +402,8 @@ exports.editInfo = async(req, res, next) => {
     }
     let password;
     //Si envia password encriptarlo con bcrypt
-    if(req.body.password){
-    password = await bcrypt.hashSync(req.body.password,10);
+    if(req.body.password1 == req.body.password2){
+    password = await bcrypt.hashSync(req.body.password1,10);
     }
 
 
